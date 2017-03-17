@@ -59,12 +59,12 @@
                             </div>
                             <div class="view-content">
                                 <ul class="list01">
-                                    <?php $even=0; ?>
+                                    <?php $index=0; ?>
                                     <?php foreach($news as $n):?>
-                                        <?php $even = $even+1;?>
-                                        <li class="<?php echo $even%2==0?"even":($even==1?"first odd": "odd");?>">
+                                        <?php $index = $index+1;?>
+                                        <li class="<?php echo $index%2==0?"even":($index==1?"first odd": "odd");?>">
                                         <b><?php echo date("Y-m-d",strtotime($n->create_time)); ?></b>
-                                        <a href= "<?php e::url("news/{$n->id}");?>">
+                                        <a href= "<?php e::url("node/{$n->id}");?>">
                                         <?php echo ($n->title); ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>

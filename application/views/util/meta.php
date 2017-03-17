@@ -28,8 +28,8 @@
 <script type="text/javascript" src="<?php e::url('js/jquery.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/jquery-1.11.0.min.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/slide.js');?>"></script>
-<!-- <script type="text/javascript" src="<?php e::url('js/drupal.js');?>"></script>
-<script type="text/javascript" src="<?php e::url('js/no_colons/no_colons.js');?>"></script>
+<script type="text/javascript" src="<?php e::url('js/drupal.js');?>"></script>
+<!-- <script type="text/javascript" src="<?php e::url('js/no_colons/no_colons.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/panels.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/views_slideshow/jquery.cycle.all.min.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/views_slideshow_singleframe/views_slideshow.js');?>"></script>

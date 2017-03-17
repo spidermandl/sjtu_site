@@ -5,7 +5,21 @@
  **/
 abstract class Controller_SubBase extends Controller_Base
 {
-    protected $left_menu = 'left_menu';//左菜单
+	/*
+	 *左菜单
+	 */
+    protected $left_menu = 'left_menu';
+    /**
+    * 右侧内容
+    */
+    protected $right_content = 'right_content';
+    protected $template_id = 0;
+    protected $page = NULL;
+    protected $articles = NULL;
+    /**
+     * 文章核心内容
+     **/
+    protected $article = NULL;
 
 	/**
 	 * 父模板id
@@ -17,17 +31,52 @@ abstract class Controller_SubBase extends Controller_Base
      */
     protected function set_menu(){
         $parent = Model_Template::find_by_id($this->getParentTemplateId());
-        $this->template_data['parent'] = $parent;
         $children = Model_Template::find(array('parent_id' => $this->getParentTemplateId()));
+
+        $this->template_data['parent'] = $parent;
         $this->template_data['children'] = $children;
-        $content = Model_Content::find_by_id($this->request->param('id', null));
-        $this->template_data['content'] = $content;
     }
 
-
+    /**
+     * 请求列表
+     */
     public function action_index()
     {
     	$this->set_menu();
+        $template_id = $this->request->param('tid', NULL);
+        $page = $this->request->param('page', NULL);
+        if ($page == NULL) {
+        	$page = 1;
+        }
+        $child = Model_Template::find_by_id($template_id);
+        $count = Model_Content::count(array('template_id' => $template_id,));
+        /**
+         * 获取该类型列表
+         */
+        $this->articles = Model_Content::find(
+        		array('template_id' =>$template_id,),
+        		$page,JT::per_page,
+        		array('create_time' => Model_Base::ORDER_DESC,));
+
+        $index = (int)$page;
+        $total = ceil($count/JT::per_page);
+        /**
+         * 模板数据
+         **/
+        $this->template_data['template_id'] = $template_id;
+        $this->template_data['child'] = $child;
+        $this->template_data['current_page'] = $index;
+        $this->template_data['count'] = ceil($count/JT::per_page);
+        $this->template_data['start'] = $index-5>0?($index-5):1;
+        $this->template_data['end'] = $index+4>$total?$total:($index+4);
+    }
+
+    /**
+	 * 获取单页文章
+	 **/
+    public function action_item(){
+    	$this->set_menu();
+        $this->page = View::factory('article/'.$this->article->link,$this->template_data);
     }
 
 
@@ -41,7 +90,9 @@ abstract class Controller_SubBase extends Controller_Base
             $body = View::factory($this->view, $this->template_data);
             $layout->bind('body', $body);
             $body->bind('menu',$menu);
-
+            $body->bind('page',$this->page);
+            $body->bind('articles',$this->articles);
+            
             $this->response->body($layout);
         }
 

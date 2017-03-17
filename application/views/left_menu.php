@@ -12,7 +12,7 @@
                                     $views_row_index = 'views-row-'.$index;
                                     $even = $index%2==0?'views-row-even':'views-row-odd';
                                     $bound = $index==1?'views-row-first':($index==count($children)?'views-row-last':'');
-                                    $selected = $content->template_id == $child->id?True:False; ?>
+                                    $selected = $template_id == $child->id?True:False; ?>
                                 <li class="views-row <?php echo $views_row_index.' '.$even.' '.$bound ?>">
                                     <div class="views-field-name">
                                         <span class="field-content">
@@ -24,7 +24,7 @@
                                     </div>
                                 </li>
                             <?php endforeach; ?>
-                            
+
                         </ul>
                     </div>
                 </div>

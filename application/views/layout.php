@@ -37,7 +37,7 @@
                 <div class="navs">
                     <ul class="menu">
                         <li class="leaf first">
-                            <a href="/" title="" class="active">首页</a></li>
+                            <a href="<?php e::url('');?>"  title="" class="active">首页</a></li>
                         <li class="expanded">
                             <a href="/node/477" title="">学院概况</a>
                             <ul class="menu">

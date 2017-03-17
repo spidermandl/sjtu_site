@@ -164,12 +164,29 @@ Cookie::$domain = $config->get('domain');
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('news', 'news/<id>',
+Route::set('news', 'news/<tid>(/page/<page>)',
     array(
-        'id' => '\d+'
+        'tid' => '\d+',
+        'page' => '\d+',
     ))->defaults(array(
           'controller' => 'news',
           'action'     => 'index',
+));
+
+// Route::set('news', 'news/<tid>',
+//     array(
+//         'tid' => '\d+',
+//     ))->defaults(array(
+//           'controller' => 'news',
+//           'action'     => 'index',
+// ));
+
+Route::set('node', 'node/<id>',
+    array(
+        'id' => '\d+'
+    ))->defaults(array(
+          'controller' => 'node',
+          'action'     => 'item',
 ));
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')

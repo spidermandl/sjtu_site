@@ -119,8 +119,36 @@ else
 	 * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
 	 * If no source is specified, the URI will be automatically detected.
 	 */
+	//测试版本执行如下代码，显示错误信息
 	echo Request::factory(TRUE, array(), FALSE)
 		->execute()
 		->send_headers(TRUE)
 		->body();
+
+	//发布版本执行如下代码
+    // $request = Request::factory(TRUE, array(), FALSE);
+    // // Attempt to execute the response
+    // $response = $request->execute();
+    // $http_code = $response->status();
+    // if ( $http_code != 200 AND $http_code != 302 )
+    // {
+    //     if (Kohana::$environment !== Kohana::DEVELOPMENT)
+    //     {
+    // //        $view = View::factory('error');
+    //         $response->body("出错了，请联系交大管理员");
+    //     }
+    // }
+
+    // if ($response->send_headers())
+    // {
+    //     // Get the total memory and execution time
+    //     $total = array(
+    //         '{memory_usage}' => number_format((memory_get_peak_usage() - KOHANA_START_MEMORY) / 1024, 2).'KB',
+    //         '{execution_time}' => number_format(microtime(TRUE) - KOHANA_START_TIME, 5).' sec');
+
+    //     // Insert the totals into the response
+    //     $response = str_replace(array_keys($total), $total, $response);
+    // }
+
+    // echo $response;
 }
