@@ -70,61 +70,6 @@
                               <?php endfor;?>
                           </ul>
 
-
-                          <!-- <ul class="pager">
-                              <li class="pager-current first">1</li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=1" title="Go to page 2" class="active">2</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=2" title="Go to page 3" class="active">3</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=3" title="Go to page 4" class="active">4</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=4" title="Go to page 5" class="active">5</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=5" title="Go to page 6" class="active">6</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=6" title="Go to page 7" class="active">7</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=7" title="Go to page 8" class="active">8</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=8" title="Go to page 9" class="active">9</a></li>
-                              <li class="pager-ellipsis">…</li>
-                              <li class="pager-next">
-                                  <a href="/news/68?page=1" title="Go to next page" class="active">next ›</a></li>
-                              <li class="pager-last last">
-                                  <a href="/news/68?page=14" title="Go to last page" class="active">last »</a></li>
-                          </ul>
-
-                          <ul class="pager">
-                              <li class="pager-first first">
-                                  <a href="/news/68" title="Go to first page" class="active">« first</a></li>
-                              <li class="pager-previous">
-                                  <a href="/news/68?page=3" title="Go to previous page" class="active">‹ previous</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68" title="Go to page 1" class="active">1</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=1" title="Go to page 2" class="active">2</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=2" title="Go to page 3" class="active">3</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=3" title="Go to page 4" class="active">4</a></li>
-                              <li class="pager-current">5</li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=5" title="Go to page 6" class="active">6</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=6" title="Go to page 7" class="active">7</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=7" title="Go to page 8" class="active">8</a></li>
-                              <li class="pager-item">
-                                  <a href="/news/68?page=8" title="Go to page 9" class="active">9</a></li>
-                              <li class="pager-ellipsis">…</li>
-                              <li class="pager-next">
-                                  <a href="/news/68?page=5" title="Go to next page" class="active">next ›</a></li>
-                              <li class="pager-last last">
-                                  <a href="/news/68?page=14" title="Go to last page" class="active">last »</a></li>
-                          </ul> -->
-
                       </div>
                         
                     </div>

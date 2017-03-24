@@ -155,14 +155,14 @@
                             </ul>
                         </li>
                         <li class="expanded last">
-                            <a href="/contacts" title="">联系我们</a>
+                            <a href="<?php e::url("contacts");?>" title="">联系我们</a>
                             <ul class="menu">
                                 <li class="leaf first">
-                                    <a href="/contacts" title="">通讯地址</a></li>
+                                    <a href="<?php e::url("contacts");?>" title="">通讯地址</a></li>
                                 <li class="leaf">
-                                    <a href="/node/1402" title="">百度地图</a></li>
+                                    <a href="<?php e::url("contacts");?>" title="">百度地图</a></li>
                                 <li class="leaf last">
-                                    <a href="/node/1403" title="">交通指南</a></li>
+                                    <a href="<?php e::url("contacts");?>" title="">交通指南</a></li>
                             </ul>
                         </li>
                     </ul>

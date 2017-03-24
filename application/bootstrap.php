@@ -173,6 +173,7 @@ Route::set('news', 'news/<tid>(/page/<page>)',
           'action'     => 'index',
 ));
 
+
 // Route::set('news', 'news/<tid>',
 //     array(
 //         'tid' => '\d+',
@@ -187,6 +188,15 @@ Route::set('node', 'node/<id>',
     ))->defaults(array(
           'controller' => 'node',
           'action'     => 'item',
+));
+
+Route::set('contacts', 'contacts/<tid>',
+    array(
+        'tid' => '\d+',
+    ))
+    ->defaults(array(
+          'controller' => 'contacts',
+          'action'     => 'index',
 ));
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')

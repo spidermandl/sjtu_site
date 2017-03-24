@@ -16,7 +16,7 @@
                                 <li class="views-row <?php echo $views_row_index.' '.$even.' '.$bound ?>">
                                     <div class="views-field-name">
                                         <span class="field-content">
-                                            <a href="<?php e::url("news/{$child->id}");?>" 
+                                            <a href="<?php e::url(JT::category_string($child->parent_id)."/{$child->id}");?>" 
                                                 class="<?php if($selected) echo 'active'; ?>">
                                                 <?php echo ($child->name); ?>
                                             </a>

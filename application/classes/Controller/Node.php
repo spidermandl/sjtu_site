@@ -1,5 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * 单篇文章
+ */
 class Controller_Node extends Controller_SubBase
 {
 

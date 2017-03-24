@@ -8,7 +8,24 @@ class JT
     public static $CATEGORY
         = array(
             'NEWS' => 1, 
+            'CONTACTS' => 6,
         );
+
+    /**
+    * 获取网页种类string
+    **/
+    public static function category_string($parent_template_id){
+        switch ($parent_template_id) {
+            case JT::$CATEGORY['NEWS']:
+                return 'news';
+
+            case JT::$CATEGORY['CONTACTS']:
+                return 'contacts';
+
+            default:
+                return '';
+        }
+    }
     /**
      * @var array result code to human language short
      */
