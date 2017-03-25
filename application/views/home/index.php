@@ -51,7 +51,7 @@
                         <div class="views_view view view-news view-id-news view-display-id-block_1 view-dom-id-4">
                             <div class="view-header">
                                 <h3 class="caption">
-                                    <a href="/news/68">+更多</a>
+                                    <a href="<?php e::url(JT::category_string(JT::$CATEGORY['NEWS']));?>">+更多</a>
                                     <span>新闻
                                         <b>News</b>
                                     </span>

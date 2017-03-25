@@ -199,6 +199,51 @@ Route::set('contacts', 'contacts/<tid>',
           'action'     => 'index',
 ));
 
+Route::set('areas', 'areas/<tid>',
+    array(
+        'tid' => '\d+',
+    ))
+    ->defaults(array(
+          'controller' => 'areas',
+          'action'     => 'index',
+));
+
+Route::set('training', 'training/<tid>',
+    array(
+        'tid' => '\d+',
+    ))
+    ->defaults(array(
+          'controller' => 'training',
+          'action'     => 'index',
+));
+
+Route::set('students', 'students/<tid>',
+    array(
+        'tid' => '\d+',
+    ))
+    ->defaults(array(
+          'controller' => 'students',
+          'action'     => 'index',
+));
+
+Route::set('advance', 'advance/<tid>',
+    array(
+        'tid' => '\d+',
+    ))
+    ->defaults(array(
+          'controller' => 'advance',
+          'action'     => 'index',
+));
+
+Route::set('organization', 'organization/<tid>',
+    array(
+        'tid' => '\d+',
+    ))
+    ->defaults(array(
+          'controller' => 'organization',
+          'action'     => 'index',
+));
+
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'home',

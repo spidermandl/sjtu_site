@@ -9,6 +9,11 @@ class JT
         = array(
             'NEWS' => 1, 
             'CONTACTS' => 6,
+            'TRAINING' =>11,
+            'AREAS' => 12,
+            'ADVANCE' => 9,
+            'ORGANIZATION' => 8,
+            'STUDENTS' => 7,
         );
 
     /**
@@ -22,9 +27,37 @@ class JT
             case JT::$CATEGORY['CONTACTS']:
                 return 'contacts';
 
+            case JT::$CATEGORY['TRAINING']:
+                return 'training';
+
+            case JT::$CATEGORY['AREAS']:
+                return 'areas';
+
+            case JT::$CATEGORY['ADVANCE']:
+                return 'advance';
+
+            case JT::$CATEGORY['ORGANIZATION']:
+                return 'organization';
+
+            case JT::$CATEGORY['STUDENTS']:
+                return 'students';
             default:
                 return '';
         }
+    }
+
+    /**
+     * 获取父模板
+     **/
+    public static function get_lead_templates($category){
+        return Model_Template::find_by_id($category);
+    }
+
+    /**
+     * 获取子模板
+     **/
+    public static function get_sub_templates($category){
+        return Model_Template::find(array('parent_id' => $category));
     }
     /**
      * @var array result code to human language short

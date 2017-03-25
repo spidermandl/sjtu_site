@@ -1,13 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 /**
- * 联系方式板块
+ * 培养模式模块
  **/
-class Controller_Contacts extends Controller_SubBase
+class Controller_Training extends Controller_SubBase
 {
 
     protected function getParentTemplateId(){
-    	return JT::$CATEGORY['CONTACTS'];
+    	return JT::$CATEGORY['TRAINING'];
     }
 
     /**

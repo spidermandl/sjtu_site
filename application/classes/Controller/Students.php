@@ -1,13 +1,13 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 /**
- * 联系方式板块
+ * 学院跟踪模块
  **/
-class Controller_Contacts extends Controller_SubBase
+class Controller_Students extends Controller_SubBase
 {
 
     protected function getParentTemplateId(){
-    	return JT::$CATEGORY['CONTACTS'];
+    	return JT::$CATEGORY['STUDENTS'];
     }
 
     /**
@@ -15,7 +15,7 @@ class Controller_Contacts extends Controller_SubBase
      */
     public function action_index()
     {
-    	parent::index_item();
+		parent::index_item();
     }
 
 }
