@@ -95,11 +95,11 @@ abstract class Controller_SubBase extends Controller_Base
         $child = $template_id==NULL?$this->template_data['children'][0]:Model_Template::find_by_id($template_id);
         $template_id = $child->id;
 
-        $this->article = //Model_Content::find_by_id($content_id);
-            Model_Content::find(
+        $articles = Model_Content::find(
                     array('template_id' =>$template_id,),
                     NULL,NULL,
-                    array('create_time' => Model_Base::ORDER_DESC,))[0];
+                    array('create_time' => Model_Base::ORDER_DESC,));
+        $this->article = $articles[0];//不能简写 云服务语法会错误
         $this->page = View::factory('article/'.$this->article->link,$this->template_data);
         /**
          * 模板数据

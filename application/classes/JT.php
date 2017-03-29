@@ -3,7 +3,7 @@
 
 class JT
 {
-    const per_page = 1;
+    const per_page = 8;
 
     public static $CATEGORY
         = array(

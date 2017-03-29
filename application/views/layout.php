@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>上海交通大学物理与天文学院</title>
+        <title>上海交通大学信息技术研究中心</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <?php echo View::factory('util/meta');?>
         <script type="text/javascript">
