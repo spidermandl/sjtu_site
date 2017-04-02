@@ -52,15 +52,21 @@ class Model_Content extends Model_Base
     public static function find_by_parent_category($page = 1, $limit = 50,$category)
     {
         $orderby = array(
-            Model_Template::$table.'.create_time' => self::ORDER_DESC,
+            Model_Content::$table.'.create_time' => self::ORDER_DESC,
         );
 
         $filters = array(
         );
 
-        $query = DB::select()->from(static::$table);
+        $query = DB::select(self::$table.'.id',
+                            self::$table.'.title', 
+                            self::$table.'.template_id',
+                            self::$table.'.link',
+                            self::$table.'.create_time',
+                            self::$table.'.update_time')
+            ->from(static::$table);//as 语法 array(self::$table.'.id' , 'cid'),array(self::$table.'.title' , 'title')
         
-        $query->join(Model_Template::$table)->on(self::$table.'.template_id' , '=' , Model_Template::$table.'.id')
+        $query->join(Model_Template::$table,'LEFT')->on(self::$table.'.template_id' , '=' , Model_Template::$table.'.id')
             ->where(Model_Template::$table.'.parent_id','=',$category);
         
         return Model_Content::basic_find($query,$filters,$page,$limit,$orderby);
@@ -80,7 +86,7 @@ class Model_Content extends Model_Base
         }
 
         $result = $query->as_object(get_called_class())->execute();
-
+        //var_dump($result->as_array());
         return $result->as_array();
     }
 
