@@ -9,7 +9,7 @@
 					</p>
 					<br/>
 					<p>
-						<img src="http://mmbiz.qpic.cn/mmbiz/v6uP0lGcBZ5usjP9JZJ9R9wjKicibWttLGfuINVLQ1XcFhzLJv7JK9uUZF5KL3SzichJR2WuTiaTv52MHYXDoNj7qg/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" class=" __bg_gif" style="height:auto !important;width:100% !important;" />
+						<img src="../img/1013/1.png" style="height:auto !important;width:100% !important;" />
 					</p>
 					<br/>
 
@@ -21,7 +21,7 @@
 						<strong>&nbsp; &nbsp; 1、音频采集</strong>
 					</p>
 					<p>
-						<span>&nbsp; &nbsp; &nbsp; &nbsp;音频数据既能与图像结合组合成视频数据，也能以纯音频的方式采集播放，后者在很多成熟的应用场景如在线电台和语音电台等起着非常重要的作用。音频的采集过程主要通过设备将环境中的模拟信号采集成 PCM 编码的原始数据，然后编码压缩成MP3等格式的数据分发出去。常见的音频压缩格式有：MP3，AAC，OGG，WMA，Opus，FLAC，APE，m4a 和 AMR 等。</span>
+						<span>&nbsp; &nbsp; &nbsp; &nbsp;音频数据既能与图像结合组合成视频数据，也能以纯音频的方式采集播放，后者在很多成熟的应用场景如在线电台和语音电台等起着非常重要的作用。音频的采集过程主要通过设备将环境中的模拟信号采集成 PCM 编码的原始数据，然后编码压缩成MP3等格式的数据分发出去。常见的音频压缩格式有：MP3，AAC，OGG，WMA，Opus，FLAC，APE，m4a和AMR 等。</span>
 					</p>
 					<br>
 					<p>
@@ -45,7 +45,7 @@
 					</p>
 
 					<p>
-						<span>&nbsp; &nbsp; &nbsp; &nbsp;音频帧（frame）：音频跟视频很不一样，视频每一帧就是一张图像，而从上面的正玄波可以看出，音频数据是流式的，本身没有明确的一帧帧的概念，在实际的应用中，为了音频算法处理/传输的方便，一般约定俗成取 2.5ms~60ms 为单位的数据量为一帧音频。这个时间被称之为“采样时间”，其长度没有特别的标准，它是根据编解码器和具体应用的需求来决定的。</span>
+						<span>&nbsp; &nbsp; &nbsp; &nbsp;音频帧（frame）：音频跟视频很不一样，视频每一帧就是一张图像，音频采集图样是正玄波，音频数据是流式的，本身没有明确的一帧帧的概念，在实际的应用中，为了音频算法处理/传输的方便，一般约定俗成取 2.5ms~60ms 为单位的数据量为一帧音频。这个时间被称之为“采样时间”，其长度没有特别的标准，它是根据编解码器和具体应用的需求来决定的。</span>
 					</p>
 					<br>
 					<p>根据以上定义，我们可以计算一下一帧音频帧的大小。假设某音频信号是采样率为8kHz、双通道、位宽为16bit，20ms一帧，则一帧音频数据的大小为：</span>
@@ -105,7 +105,7 @@
 						<strong>&nbsp; &nbsp; 2.屏幕录制</strong>
 					</p>
 					<p>
-						<span>&nbsp; &nbsp; &nbsp; &nbsp; 屏幕录制采集的方式在游戏直播场景中非常常见，目前我们在 Android SDK中实现了屏幕录制的功能。而 iOS 则由于系统本身没有开放屏幕录制的权限而没法直接操作，但对于iOS 9以上的版本，是有个取巧的办法，可以通过模拟一个AirPlay镜像连接到（当前App）自身，这样就可以在软件上捕获到屏幕上的任何操作，达到录制屏幕的效果。</span>
+						<span>&nbsp; &nbsp; &nbsp; &nbsp; 屏幕录制采集的方式在游戏直播场景中非常常见，目前在Android SDK中实现了屏幕录制的功能。而iOS则由于系统本身没有开放屏幕录制的权限而没法直接操作，但对于iOS 9以上的版本，是有个取巧的办法，可以通过模拟一个AirPlay镜像连接到（当前App）自身，这样就可以在软件上捕获到屏幕上的任何操作，达到录制屏幕的效果。</span>
 					</p>
 					<br />
 
@@ -129,12 +129,12 @@
 					<br />
 
 					<p>
-						<span>为了支持市场上所有采集源的接入，我们在SDK中采用了开放式的设计，只要采集源实现方遵循相应的接口，即可支持任意的采集源。</span>
+						<span>为了支持市场上所有采集源的接入，需要SDK使用开放式的设计，只要采集源实现方遵循相应的接口，即可支持任意的采集源。</span>
 					</p>
 					<br />
 
 					<p style="color:#3E3E3E;font-family:&quot;font-size:18px;background-color:#FFFFFF;">
-						<span style="font-size:16px;"><img src="http://mmbiz.qpic.cn/mmbiz_png/v6uP0lGcBZ4nhCwY9knz3icM12ckR2U479x7k2s2wtbNVbLpQj0QDk4o6IibUqEl5uHjXwmdTN8ialF7eenLxZRibw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" style="height:auto !important;width:100% !important;" /><br />
+						<span style="font-size:16px;"><img src="../img/1013/2.png" style="height:auto !important;width:100% !important;" /><br />
 						</span>
 					</p>
 					<br />

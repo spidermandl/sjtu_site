@@ -168,7 +168,7 @@
 				</p>
 
 				<p>
-					<span>OpenH264是思科实现的开源H.264编码，虽然H.264需要交纳不菲的专利费用，但是专利费有一个年度上限，思科把OpenH264 实现的年度专利费交满后，OpenH264 事实上就可以免费自由的使用了。</span>
+					<span>OpenH264是思科实现的开源H.264编码，虽然H.264需要交纳不菲的专利费用，但是专利费有一个年度上限，思科把OpenH264实现的年度专利费交满后，OpenH264事实上就可以免费自由的使用了。</span>
 				</p>
 				<p>
 					<span>x264是一个采用GPL授权的视频编码自由软件。x264的主要功能在于进行H.264/MPEG-4 AVC的视频编码，而不是作为解码器（decoder）之用。除去费用问题比较来看：</span>
@@ -374,12 +374,12 @@
 				<p>
 					<span>输出：</span>
 				</p>
-				<pre>[AVFoundation input device @ 0x7fbec0c10940] AVFoundation video devices:
-				[AVFoundation input device @ 0x7fbec0c10940] [0] FaceTime HD Camera
-				[AVFoundation input device @ 0x7fbec0c10940] [1] Capture screen 0
-				[AVFoundation input device @ 0x7fbec0c10940] [2] Capture screen 1
-				[AVFoundation input device @ 0x7fbec0c10940] AVFoundation audio devices:
-				[AVFoundation input device @ 0x7fbec0c10940] [0] Built-in Microphone</pre>
+				<pre>[AVFoundation input device @ 0x7fbec0c10940] AVFoundation video devices:</pre>
+				<pre>[AVFoundation input device @ 0x7fbec0c10940] [0] FaceTime HD Camera</pre>
+				<pre>[AVFoundation input device @ 0x7fbec0c10940] [1] Capture screen 0</pre>
+				<pre>[AVFoundation input device @ 0x7fbec0c10940] [2] Capture screen 1</pre>
+				<pre>[AVFoundation input device @ 0x7fbec0c10940] AVFoundation audio devices:</pre>
+				<pre>[AVFoundation input device @ 0x7fbec0c10940] [0] Built-in Microphone</pre>
 				<p>
 					<span>给出了当前设备支持的所有输入设备的列表和编号，我本地有两块显示器，所以 1 和 2 都是我屏幕，可以选择一块进行录屏。</span>
 				</p>
@@ -393,7 +393,8 @@
 				<p>
 					<span>输出：</span>
 				</p>
-				<pre>DEV.LS h264   H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (decoders: h264 h264_vda ) (encoders: libx264 libx264rgb )</pre>
+				<pre>DEV.LS h264   H.264/AVC/MPEG-4 AVC/MPEG-4 part 10 </pre>
+				<pre>(decoders: h264 h264_vda)(encoders: libx264 libx264rgb )</pre>
 				<p>
 					<span>查看当前的 VP8 编解码器：</span>
 				</p>
@@ -404,12 +405,12 @@
 				<p>
 					<span>输出：</span>
 				</p>
-				<pre>DEV.L. vp8   On2 VP8 (decoders: vp8 libvpx ) (encoders: libvpx )</pre>
+				<pre>DEV.L. vp8  On2 VP8 (decoders: vp8 libvpx ) (encoders: libvpx )</pre>
 				<p>
 					<span>可以选择用 VP8 或者 H264 做编码器</span>
 				</p>
-				<pre>ffmpeg -r 30 -f avfoundation -i 1 -vcodec vp8 -quality realtime screen2.webm
-				# -quality realtime 用来优化编码器，如果不加在我的 Air 上帧率只能达到 2</pre>
+				<pre>ffmpeg -r 30 -f avfoundation -i 1 -vcodec vp8 -quality realtime screen2.webm</pre>
+				<pre># -quality realtime 用来优化编码器，如果不加在我的 Air 上帧率只能达到 2</pre>
 				<p>
 					<span>or</span>
 				</p>
@@ -434,8 +435,8 @@
 				<p>
 					<span>有一个特别有用的需求，在网上发现了一个特别有趣的视频想把它转换成一个动态表情，作为一个 IT 从业者，我第一个想到的不是下载一个转码器，也不是去找一个在线转换网站，直接利用手边的工具 FFmpeg，瞬间就完成了转码：</span>
 				</p>
-				<pre>ffmpeg -ss 10 -t 10 &nbsp;-i tutu.mp4 &nbsp;-s 80x60 &nbsp;tutu.gif
-				## -ss 指从 10s 开始转码,-t 指转换 10s 的视频 -s</pre>
+				<pre>ffmpeg -ss 10 -t 10 &nbsp;-i tutu.mp4 &nbsp;-s 80x60 &nbsp;tutu.gif</pre>
+				<pre>## -ss 指从 10s 开始转码,-t 指转换 10s 的视频 -s</pre>
 				<br />
 
 				<h3>
@@ -456,23 +457,25 @@
 				<p>
 					<span>Step 3：创建 nginx html 路径，启动 docker-nginx-rtmp</span>
 				</p>
-				<pre>mkdir ~/rtmp
-				docker run -d -p 80:80 -p 1935:1935 -v ~/rtmp:/usr/local/nginx/html chakkritte/docker-nginx-rtmp</pre>
+				<pre>mkdir ~/rtmp docker run -d -p 80:80 -p 1935:1935 -v </pre>
+				<pre>~/rtmp:/usr/local/nginx/html chakkritte/docker-nginx-rtmp</pre>
 				<p>
 					<span>Step 4：推送屏幕录制到 nignx-rtmp</span>
 				</p>
-				<pre>ffmpeg -y -loglevel warning -f avfoundation -i 2 -r 30 -s 480x320 -threads 2 -vcodec libx264 &nbsp;-f flv rtmp://127.0.0.1/live/test</pre>
+				<pre>ffmpeg -y -loglevel warning -f avfoundation -i 2 -r 30 -s 480x320 -threads 2 -vcodec </pre>
+				<pre>libx264 &nbsp;-f flv rtmp://127.0.0.1/live/test</pre>
 				<p>
 					<span>Step 5：用 ffplay 播放</span>
 				</p>
 				<pre>ffplay rtmp://127.0.0.1/live/test</pre>
 				<p>
-					<span>总结一下，FFmpeg 是个优秀的工具，可以通过它完成很多日常的工作和实验，但是距离提供真正可用的流媒体服务、直播服务还有非常多的工作要做，这方面可以参考七牛云发布的七牛直播云服务&nbsp;。</span>
+					<span>总结一下，FFmpeg 是个优秀的工具，可以通过它完成很多日常的工作和实验，但是距离提供真正可用的流媒体服务、直播服务还有非常多的工作要做。</span>
 				</p>
-
-				<p>
+				<br/>
+				<h3>
 					<span>封装</span>
-				</p>
+				</h3>
+				<br/>
 				<p>
 					<span>介绍完了视频编码后，再来介绍一些封装。沿用前面的比喻，封装可以理解为采用哪种货车去运输，也就是媒体的容器。</span>
 				</p>
@@ -497,7 +500,7 @@
 				</p>
 				<br />
 				<p>
-					<span>4）MPEG 格式（文件后缀可以是 .mpg .mpeg .mpe .dat .vob .asf .3gp .mp4等) : 它的英文全称为 Moving Picture Experts Group，即运动图像专家组格式，该专家组建于 1988 年，专门负责为 CD 建立视频和音频标准，而成员都是为视频、音频及系统领域的技术专家。MPEG 文件格式是运动图像压缩算法的国际标准。MPEG 格式目前有三个压缩标准，分别是 MPEG－1、MPEG－2、和 MPEG－4 。MPEG－1、MPEG－2 目前已经使用较少，着重介绍 MPEG－4，其制定于 1998 年，MPEG－4 是为了播放流式媒体的高质量视频而专门设计的，以求使用最少的数据获得最佳的图像质量。目前 MPEG-4 最有吸引力的地方在于它能够保存接近于 DVD 画质的小体积视频文件。</span>
+					<span>4）MPEG 格式（文件后缀可以是 .mpg .mpeg .mpe .dat .vob .asf .3gp .mp4等) : 它的英文全称为 Moving Picture Experts Group，即运动图像专家组格式，该专家组建于1988年，专门负责为CD建立视频和音频标准，而成员都是为视频、音频及系统领域的技术专家。MPEG文件格式是运动图像压缩算法的国际标准。MPEG格式目前有三个压缩标准，分别是MPEG－1、MPEG－2、和MPEG－4。MPEG－1、MPEG－2目前已经使用较少，着重介绍MPEG－4，其制定于1998年，MPEG－4是为了播放流式媒体的高质量视频而专门设计的，以求使用最少的数据获得最佳的图像质量。目前 MPEG-4 最有吸引力的地方在于它能够保存接近于 DVD 画质的小体积视频文件。</span>
 				</p>
 				<br />
 				<p>
@@ -505,11 +508,11 @@
 				</p>
 				<br />
 				<p>
-					<span>6）Real Video 格式（后缀为 .rm .rmvb）: Real Networks 公司所制定的音频视频压缩规范称为Real Media。用户可以使用 RealPlayer 根据不同的网络传输速率制定出不同的压缩比率，从而实现在低速率的网络上进行影像数据实时传送和播放。RMVB 格式：这是一种由 RM 视频格式升级延伸出的新视频格式，当然性能上有很大的提升。RMVB 视频也是有着较明显的优势，一部大小为 700 MB 左右的 DVD 影片，如果将其转录成同样品质的 RMVB 格式，其个头最多也就 400 MB 左右。大家可能注意到了，以前在网络上下载电影和视频的时候，经常接触到 RMVB 格式，但是随着时代的发展这种格式被越来越多的更优秀的格式替代，著名的人人影视字幕组在 2013 年已经宣布不再压制 RMVB 格式视频。</span>
+					<span>6）Real Video 格式（后缀为 .rm .rmvb）: Real Networks 公司所制定的音频视频压缩规范称为Real Media。用户可以使用 RealPlayer根据不同的网络传输速率制定出不同的压缩比率，从而实现在低速率的网络上进行影像数据实时传送和播放。RMVB格式：这是一种由RM视频格式升级延伸出的新视频格式，当然性能上有很大的提升。RMVB 视频也是有着较明显的优势，一部大小为700MB左右的DVD影片，如果将其转录成同样品质的RMVB格式，其个头最多也就400MB左右。大家可能注意到了，以前在网络上下载电影和视频的时候，经常接触到RMVB格式，但是随着时代的发展这种格式被越来越多的更优秀的格式替代，著名的人人影视字幕组在 2013 年已经宣布不再压制 RMVB 格式视频。</span>
 				</p>
 				<br />
 				<p>
-					<span>7）Flash Video 格式（后缀为 .flv）:由 Adobe Flash 延伸出来的的一种流行网络视频封装格式。随着视频网站的丰富，这个格式已经非常普及。</span>
+					<span>7）Flash Video 格式（后缀为 .flv）:由Adobe Flash延伸出来的的一种流行网络视频封装格式。随着视频网站的丰富，这个格式已经非常普及。</span>
 				</p>
 				<br />
 				<p>

@@ -6,21 +6,16 @@
 					<br/>
 					
 					<p>
-						&nbsp; &nbsp; &nbsp; &nbsp; 「80%的主播没有美颜根本没法看。」不光是美颜，很多其它的视频处理如模糊效果、水印等也都是在这个环节做。目前iOS端比较知名的是GPUImage这个库，提供了丰富端预处理效果，还可以基于这个库自己写算法实现更丰富端效果。Android也有GPUImage这个库的移植，叫做android-gpuimage。同时，Google官方开源了一个伟大的库，覆盖了Android 上面很多多媒体和图形图像相关的处理。
-					</p> 
-					<br />
-
-					<p>
-						<span>&nbsp; &nbsp; &nbsp; &nbsp;视频或者音频完成采集之后得到原始数据，为了增强一些现场效果或者加上一些额外的效果，我们一般会在将其编码压缩前进行处理，比如打上时间戳或者公司 Logo 的水印，祛斑美颜和声音混淆等处理。在主播和观众连麦场景中，主播需要和某个或者多个观众进行对话，并将对话结果实时分享给其他所有观众，连麦的处理也有部分工作在推流端完成。</span>
+						<span>&nbsp; &nbsp; &nbsp; &nbsp;「80%的主播没有美颜根本没法看。」不光是美颜，很多其它的视频处理如模糊效果、水印等也都是在这个环节做。视频或者音频完成采集之后得到原始数据，为了增强一些现场效果或者加上一些额外的效果，我们一般会在将其编码压缩前进行处理，比如打上时间戳或者公司 Logo 的水印，祛斑美颜和声音混淆等处理。在主播和观众连麦场景中，主播需要和某个或者多个观众进行对话，并将对话结果实时分享给其他所有观众，连麦的处理也有部分工作在推流端完成。</span>
 					</p>
 					<br>
 					<strong>------------------开放式设计------------------</strong>
 
 					<p style="color:#3E3E3E;font-family:&quot;font-size:18px;background-color:#FFFFFF;">
-						<img src="http://mmbiz.qpic.cn/mmbiz_png/v6uP0lGcBZ4ibsRfiaSnecOaToIjCiaiaQzQaY3VINGM0IoUEFEDzT7ADN9M4yQTHgsVUE70XFh9SmBjWEb2XwMmibA/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" style="height:auto !important;width:100% !important;" />
+						<img src="../img/1012/1.png" style="height:auto !important;width:100% !important;" />
 					</p>
 					<p>
-						<span>如上图所示，处理环节中分为音频和视频处理，音频处理中具体包含混音、降噪和声音特效等处理，视频处理中包含美颜、水印、以及各种自定义滤镜等处理。对于七牛这样的直播云服务来说，为了满足所有客户的需求，除了要提供这些「标准」处理功能之外，我们还需要将该模块设计成可自由接入自定义处理功能的方式。</span>
+						<span>如上图所示，处理环节中分为音频和视频处理，音频处理中具体包含混音、降噪和声音特效等处理，视频处理中包含美颜、水印、以及各种自定义滤镜等处理。对于直播云服务来说，为了满足所有客户的需求，除了要提供这些「标准」处理功能之外，我们还需要将该模块设计成可自由接入自定义处理功能的方式。</span>
 					</p>
 					<br />
 
@@ -48,7 +43,7 @@
 					<br />
 
 					<p>
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;七牛直播云提供的iOS和Android 推流SDK中内置了美颜功能，你可以根据自己的需要选择开关美颜功能，并且能够自由调节包括美颜，美白，红润等在内的参数。其中 iOS 端 SDK PLCameraStreamingKit 的参数设置如下：</span>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;直播云提供的iOS和Android 推流SDK中内置了美颜功能，你可以根据自己的需要选择开关美颜功能，并且能够自由调节包括美颜，美白，红润等在内的参数。其中 iOS 端 SDK PLCameraStreamingKit 的参数设置如下：</span>
 					</p>
 					<br />
 
@@ -98,7 +93,7 @@
 					<br />
 
 					<p>
-						<span>七牛直播云提供的 iOS 和 Android 推流SDK中也内置了水印功能，你可以根据自己的需要添加水印或移除水印，并且能够自由设置水印的大小和位置。其中 iOS 端 SDK PLCameraStreamingKit 的参数设置如下：</span>
+						<span>直播云提供的 iOS 和 Android 推流SDK中也内置了水印功能，你可以根据自己的需要添加水印或移除水印，并且能够自由设置水印的大小和位置。其中 iOS 端 SDK PLCameraStreamingKit 的参数设置如下：</span>
 					</p>
 					<br />
 
@@ -131,7 +126,7 @@
 					<br />
 
 					<p>
-						<span>除了上面提到的美颜和水印之外，视频中还有很多其它的处理效果也在这个环节完成。七牛直播云提供的SDK在开放性设计基础之上，通过数据源回调接口，可以支持各种自定义滤镜的接入。</span>
+						<span>除了上面提到的美颜和水印之外，视频中还有很多其它的处理效果也在这个环节完成。直播云提供的SDK在开放性设计基础之上，通过数据源回调接口，可以支持各种自定义滤镜的接入。</span>
 					</p>
 					<br />
 
@@ -156,7 +151,7 @@
 					<br />
 
 					<p>
-						<img src="http://mmbiz.qpic.cn/mmbiz_png/v6uP0lGcBZ4ibsRfiaSnecOaToIjCiaiaQzQVgIb02npI4jA9mviczrRiawotzE0NjC6y4tPnUSfgpMNXIktlFib0FePg/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" style="height:auto !important;width:100% !important;" />
+						<img src="../img/1012/2.png" style="height:auto !important;width:100% !important;" />
 					</p>
 					<br />
 
@@ -193,7 +188,7 @@
 					<br />
 
 					<p>
-						<img src="http://mmbiz.qpic.cn/mmbiz_png/v6uP0lGcBZ4ibsRfiaSnecOaToIjCiaiaQzQtupNjfhKb2nrop3kwUpDqvt4huJbFhzBw9GOyMo2u0Zga71BKibRJsQ/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" style="height:auto !important;width:100% !important;" />
+						<img src="../img/1012/3.png" style="height:auto !important;width:100% !important;" />
 					</p>
 					<br />
 
@@ -203,7 +198,7 @@
 					<br />
 
 					<p>
-						<img src="http://mmbiz.qpic.cn/mmbiz_png/v6uP0lGcBZ4ibsRfiaSnecOaToIjCiaiaQzQr9jaNzADic9icTcLOoQ1zbCkwPJtDy9Y4CibQVr9C28K8eOKlfhktMfzg/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" style="height:auto !important;width:100% !important;" />
+						<img src="../img/1012/4.png" style="height:auto !important;width:100% !important;" />
 					</p>
 					<br />
 					<p>
@@ -212,8 +207,8 @@
 					<br />
 
 					<p>
-						<img src="http://mmbiz.qpic.cn/mmbiz_png/v6uP0lGcBZ4ibsRfiaSnecOaToIjCiaiaQzQr7kyAl4zHM6kLKjhpakvYWpAH4JU5HsOeEx48rmgHT7JD22iaaRjOrQ/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" style="height:auto !important;width:100% !important;" /><br />
-						<span>作为一个高性能、可伸缩的直播基础服务提供商，七牛直播云经过评估选择了以主播为中心形成星形通信网络，支持主播和多个观众之间的互动质量。同时，为了保证合成后的音视频实时传输到其他观众端，这里采用经过改造的 UDP 协议传输：</span>
+						<img src="../img/1012/5.png" style="height:auto !important;width:100% !important;" /><br />
+						<span>作为一个高性能、可伸缩的直播基础服务提供商，直播云经过评估选择了以主播为中心形成星形通信网络，支持主播和多个观众之间的互动质量。同时，为了保证合成后的音视频实时传输到其他观众端，这里采用经过改造的 UDP 协议传输：</span>
 					</p>
 					<p>
 						<span>1. 通过 UDP 降低传输延迟。</span>
