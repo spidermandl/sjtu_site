@@ -11,6 +11,7 @@ class Model_Template extends Model_Base
         'id',
         'parent_id',
         'name',
+        'type',
         'create_time',
         'update_time',
     );
@@ -22,6 +23,7 @@ class Model_Template extends Model_Base
     public $id;
     public $parent_id;
     public $name;
+    public $type;//模板zhonglei
     public $create_time;
     public $update_time;
 

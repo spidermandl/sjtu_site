@@ -10,12 +10,5 @@ class Controller_Advance extends Controller_SubBase
     	return JT::$CATEGORY['ADVANCE'];
     }
 
-    /**
-     * 请求列表
-     */
-    public function action_index()
-    {
-		parent::index_item();
-    }
 
 }

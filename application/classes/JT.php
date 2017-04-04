@@ -5,6 +5,9 @@ class JT
 {
     const per_page = 8;
 
+    /**
+    * 内容分类
+    **/
     public static $CATEGORY
         = array(
             'NEWS' => 1, 
@@ -16,6 +19,12 @@ class JT
             'STUDENTS' => 7,
         );
 
+    public static $STRUCTURE
+        = array(
+            'ROOT' => 1, 
+            'TITLE' => 2, 
+            'DIRECTORY' => 3, 
+        );
     /**
     * 获取网页种类string
     **/

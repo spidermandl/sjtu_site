@@ -42,26 +42,33 @@ abstract class Controller_SubBase extends Controller_Base
      */
     public function action_index()
     {
-    	$this->index_sub_list();
+        $this->set_menu();
+        $template_id = $this->request->param('tid', NULL);        
+        if ($template_id==NULL) {
+            $child = $this->template_data['children'][0];
+        }else{
+            $child = Model_Template::find_by_id($template_id);
+        }
+
+        if ($child->type == JT::$STRUCTURE['DIRECTORY']) {
+            $this->index_sub_list($child);
+        }else{
+            $this->index_item($child);
+        }
+    	//$this->index_sub_list();
     }
 
     /**
      * 获取二级列表
      **/
-    public function index_sub_list(){
-        $this->set_menu();
-        $template_id = $this->request->param('tid', NULL);
+    public function index_sub_list($child){
+
+        $template_id = $child->id;
         $page = $this->request->param('page', NULL);
         if ($page == NULL) {
             $page = 1;
         }
-        if ($template_id==NULL) {
-            $child = $this->template_data['children'][0];
-            $template_id = $child->id;
-        }else{
-            $child = Model_Template::find_by_id($template_id);
-        }
-        
+
         $count = Model_Content::count(array('template_id' => $template_id,));
 
         /**
@@ -89,10 +96,8 @@ abstract class Controller_SubBase extends Controller_Base
     /**
     * 直接二级菜单
     **/
-    public function index_item(){
-        $this->set_menu();
-        $template_id = $this->request->param('tid', NULL);
-        $child = $template_id==NULL?$this->template_data['children'][0]:Model_Template::find_by_id($template_id);
+    public function index_item($child){
+
         $template_id = $child->id;
 
         $articles = Model_Content::find(

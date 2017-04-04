@@ -10,12 +10,5 @@ class Controller_Contacts extends Controller_SubBase
     	return JT::$CATEGORY['CONTACTS'];
     }
 
-    /**
-     * 请求列表
-     */
-    public function action_index()
-    {
-    	parent::index_item();
-    }
 
 }
