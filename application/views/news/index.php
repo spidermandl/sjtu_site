@@ -36,7 +36,7 @@
                                               <li class="pager-ellipsis">…</li>
                                           <?php endif;?>
                                           <li class="pager-item">
-                                              <a href="<?php e::url('news/'.$template_id.'/page/'.$i);?>" title="Go to page <?php echo ($i);?>" class="active"><?php echo ($i);?></a></li>
+                                              <a href="<?php e::url(JT::category_string($child->parent_id).'/'.$template_id.'/page/'.$i);?>" title="Go to page <?php echo ($i);?>" class="active"><?php echo ($i);?></a></li>
                                       <?php endif;?>
 
                                   <?php endif;?>
@@ -46,7 +46,7 @@
                                           <li class="pager-current"><?php echo $i;?></li>
                                       <?php else:?>
                                           <li class="pager-item">
-                                              <a href="<?php e::url('news/'.$template_id.'/page/'.$i);?>" title="Go to page <?php echo ($i);?>" class="active"><?php echo ($i);?></a></li>
+                                              <a href="<?php e::url(JT::category_string($child->parent_id).'/'.$template_id.'/page/'.$i);?>" title="Go to page <?php echo ($i);?>" class="active"><?php echo ($i);?></a></li>
                                       <?php endif;?>
                                   <?php endif;?>
 
@@ -55,14 +55,14 @@
                                           <li class="pager-current last"><?php echo $count;?></li>
                                       <?php else:?>
                                           <li class="pager-item">
-                                              <a href="<?php e::url('news/'.$template_id.'/page/'.$i);?>" title="Go to page <?php echo ($i);?>" class="active"><?php echo ($i);?></a></li>
+                                              <a href="<?php e::url(JT::category_string($child->parent_id).'/'.$template_id.'/page/'.$i);?>" title="Go to page <?php echo ($i);?>" class="active"><?php echo ($i);?></a></li>
                                           <?php if ($end != $count):?>
                                               <li class="pager-ellipsis">…</li>
                                           <?php endif;?>
                                           <li class="pager-next">
-                                              <a href="<?php e::url('news/'.$template_id.'/page/'.($current_page+1));?>" title="Go to next page" class="active">next ›</a></li>
+                                              <a href="<?php e::url(JT::category_string($child->parent_id).'/'.$template_id.'/page/'.($current_page+1));?>" title="Go to next page" class="active">next ›</a></li>
                                           <li class="pager-last last">
-                                              <a href="<?php e::url('news/'.$template_id.'/page/'.($count));?>"  title="Go to last page" class="active">last »</a></li>
+                                              <a href="<?php e::url(JT::category_string($child->parent_id).'/'.$template_id.'/page/'.($count));?>"  title="Go to last page" class="active">last »</a></li>
                                       <?php endif;?>
 
                                   <?php endif;?>

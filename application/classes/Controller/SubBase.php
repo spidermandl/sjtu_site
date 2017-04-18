@@ -62,7 +62,6 @@ abstract class Controller_SubBase extends Controller_Base
      * 获取二级列表
      **/
     public function index_sub_list($child){
-
         $template_id = $child->id;
         $page = $this->request->param('page', NULL);
         if ($page == NULL) {
@@ -97,7 +96,6 @@ abstract class Controller_SubBase extends Controller_Base
     * 直接二级菜单
     **/
     public function index_item($child){
-
         $template_id = $child->id;
 
         $articles = Model_Content::find(
@@ -105,7 +103,13 @@ abstract class Controller_SubBase extends Controller_Base
                     NULL,NULL,
                     array('create_time' => Model_Base::ORDER_DESC,));
         $this->article = $articles[0];//不能简写 云服务语法会错误
-        $this->page = View::factory('article/'.$this->article->link,$this->template_data);
+
+        try {
+            $this->page = View::factory('article/'.$this->article->link,$this->template_data);
+        } catch (Exception $e) {
+            $this->page = View::factory('no_page',$this->template_data);
+        }
+        //$this->page = View::factory('article/'.$this->article->link,$this->template_data);
         /**
          * 模板数据
          **/

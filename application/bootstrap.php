@@ -208,15 +208,22 @@ Route::set('areas', 'areas/<tid>',
           'action'     => 'index',
 ));
 
-Route::set('training', 'training/<tid>',
-    array(
-        'tid' => '\d+',
-    ))
-    ->defaults(array(
-          'controller' => 'training',
-          'action'     => 'index',
+// Route::set('training', 'training/<tid>',
+//     array(
+//         'tid' => '\d+',
+//     ))
+//     ->defaults(array(
+//           'controller' => 'training',
+//           'action'     => 'index',
+// ));
+Route::set('training', 'training/<tid>(/page/<page>)',
+  array(
+      'tid' => '\d+',
+      'page' => '\d+',
+  ))->defaults(array(
+        'controller' => 'training',
+        'action'     => 'index',
 ));
-
 Route::set('students', 'students/<tid>',
     array(
         'tid' => '\d+',
@@ -235,13 +242,22 @@ Route::set('advance', 'advance/<tid>',
           'action'     => 'index',
 ));
 
-Route::set('organization', 'organization/<tid>',
-    array(
-        'tid' => '\d+',
-    ))
-    ->defaults(array(
-          'controller' => 'organization',
-          'action'     => 'index',
+// Route::set('organization', 'organization/<tid>',
+//     array(
+//         'tid' => '\d+',
+//     ))
+//     ->defaults(array(
+//           'controller' => 'organization',
+//           'action'     => 'index',
+// ));
+
+Route::set('organization', 'organization/<tid>(/page/<page>)',
+  array(
+      'tid' => '\d+',
+      'page' => '\d+',
+  ))->defaults(array(
+        'controller' => 'organization',
+        'action'     => 'index',
 ));
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
