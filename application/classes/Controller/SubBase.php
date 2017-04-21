@@ -121,7 +121,11 @@ abstract class Controller_SubBase extends Controller_Base
 	 **/
     public function action_item(){
     	$this->set_menu();
-        $this->page = View::factory('article/'.$this->article->link,$this->template_data);
+        try {
+            $this->page = View::factory('article/'.$this->article->link,$this->template_data);
+        } catch (Exception $e) {
+            $this->page = View::factory('no_page',$this->template_data);
+        }
     }
 
 

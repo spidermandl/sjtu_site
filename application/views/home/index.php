@@ -79,7 +79,7 @@
                         <div class="views_view view view-Notice view-id-Notice view-display-id-panel_pane_2 view-dom-id-1">
                             <div class="view-header">
                                 <h3 class="title">
-                                    <a href="/notices">+更多</a>
+                                    <a href="<?php e::url(JT::category_string(JT::$CATEGORY['NEWS']).'/'.JT::$CATEGORY['NOTICE']);?>">+更多</a>
                                     <span>通知公告
                                         <b>Announcement</b>
                                     </span>
@@ -87,26 +87,16 @@
                             </div>
                             <div class="view-content">
                                 <ul class="list02">
-                                    <li class="first odd">
-                                        <p>
-                                            <a href="/node/2018">物理与天文系2017年博士招生（硕博连读、申请考核、普通招考）报名通知</a></p>
-                                        <p>2016-10-12</p>
-                                    </li>
-                                    <li class="even">
-                                        <p>
-                                            <a href="/node/2020">上海交通大学物理与天文系2017年推荐免试研究生选拔结果公示</a></p>
-                                        <p>2016-12-07</p>
-                                    </li>
-                                    <li class="odd">
-                                        <p>
-                                            <a href="/node/2012">物理与天文系2016年研究生国家奖学金评审结果公示</a></p>
-                                        <p>2016-10-09</p>
-                                    </li>
-                                    <li class="last even">
-                                        <p>
-                                            <a href="/node/1990">物理与天文系2017年推荐免试研究生选拔办法</a></p>
-                                        <p>2016-09-14</p>
-                                    </li>
+                                    <?php $index=0; ?>
+                                    <?php foreach($notices as $n):?>
+                                        <?php $index = $index+1;?>
+                                        <li class="<?php echo $index%2==0?"even":($index==1?"first odd": "odd");?>">
+                                            <p>
+                                            <a href="<?php e::url("node/{$n->id}");?>"><?php echo ($n->title); ?></a>
+                                            </p>
+                                            <p><?php echo date("Y-m-d",strtotime($n->create_time)); ?></p>
+                                        </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </div>
@@ -119,7 +109,7 @@
                             <div class="view-header">
                                 <h3 class="title">
                                     <a href="/events">+更多</a>
-                                    <span>学术活动
+                                    <span>技术分享
                                         <b>Academic Events</b>
                                     </span>
                                 </h3>
@@ -215,7 +205,7 @@
                             <a class="link2" href="/node/494"></a>
                             <a class="link3" href=""></a>
                             <a class="link4" href="/meetingroom"></a>
-                            <a class="link5" href="sites/www.physics.sjtu.edu.cn/themes/phytheme/phy-weixin.jpg" data-lightbox="weixin"></a>
+                            <a class="link5" href="<?php e::url("/img/qrcode_for_gh_8d2180b9c7da_430.jpg");?>" data-lightbox="weixin"></a>
                         </div>
                     </div>
                 </div>

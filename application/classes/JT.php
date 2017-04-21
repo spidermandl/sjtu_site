@@ -17,6 +17,10 @@ class JT
             'ADVANCE' => 9,
             'ORGANIZATION' => 8,
             'STUDENTS' => 7,
+
+            /**************************/
+            'CENTER_NEWS' => 2,
+            'NOTICE' => 35,
         );
 
     public static $STRUCTURE

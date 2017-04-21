@@ -260,6 +260,7 @@ Route::set('organization', 'organization/<tid>(/page/<page>)',
         'action'     => 'index',
 ));
 
+
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'home',
