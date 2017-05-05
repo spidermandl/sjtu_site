@@ -35,6 +35,15 @@
                     学生入职
                 </h3>
                 <br />
+                    <img src="../img/8022/1.jpg" style="height:70% !important;width:70% !important;" />
+                <br />
+                <br />
+                    <img src="../img/8022/2.jpg" style="height:70% !important;width:70% !important;" />
+                <br />
+                <br />
+                    <img src="../img/8022/3.jpg" style="height:70% !important;width:70% !important;" />
+                <br />
+                <br />
                 <h3>
                     招聘职位
                 </h3>

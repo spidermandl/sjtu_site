@@ -17,10 +17,12 @@ class JT
             'ADVANCE' => 9,
             'ORGANIZATION' => 8,
             'STUDENTS' => 7,
+            'UPDATES' => 40,
 
             /**************************/
             'CENTER_NEWS' => 2,
             'NOTICE' => 35,
+            'SHARING' => 41,
         );
 
     public static $STRUCTURE
@@ -54,8 +56,32 @@ class JT
 
             case JT::$CATEGORY['STUDENTS']:
                 return 'students';
+
+            case JT::$CATEGORY['UPDATES']:
+                return 'updates';
             default:
                 return '';
+        }
+    }
+
+    public static function getChineseWeekName($day){
+        switch ($day) {
+            case 0:
+                return '星期日';
+            case 1:
+                return '星期一';
+            case 2:
+                return '星期二';
+            case 3:
+                return '星期三';
+            case 4:
+                return '星期四';
+            case 5:
+                return '星期五';
+            case 6:
+                return '星期六';
+            default:
+                return '星期一';
         }
     }
 

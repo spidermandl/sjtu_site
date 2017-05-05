@@ -36,6 +36,10 @@
                     <img src="../img/8010/3.jpg" style="height:50% !important;width:50% !important;" />
                     <br />
                 <br />
+                <br />
+                    <img src="../img/8010/4.jpg" style="height:50% !important;width:50% !important;" />
+                    <br />
+                <br />
                 <h3>
                     招聘职位
                 </h3>

@@ -39,6 +39,12 @@
                     学生入职
                 </h3>
                 <br />
+                    <img src="../img/8018/1.jpg" style="height:70% !important;width:70% !important;" />
+                <br />
+                <br />
+                    <img src="../img/8018/2.jpg" style="height:70% !important;width:70% !important;" />
+                <br />
+                <br />
                 
 
             </div>

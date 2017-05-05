@@ -242,14 +242,14 @@ Route::set('advance', 'advance/<tid>',
           'action'     => 'index',
 ));
 
-// Route::set('organization', 'organization/<tid>',
-//     array(
-//         'tid' => '\d+',
-//     ))
-//     ->defaults(array(
-//           'controller' => 'organization',
-//           'action'     => 'index',
-// ));
+Route::set('updates', 'updates/<tid>(/page/<page>)',
+    array(
+        'tid' => '\d+',
+        'page' => '\d+',
+    ))->defaults(array(
+          'controller' => 'updates',
+          'action'     => 'index',
+));
 
 Route::set('organization', 'organization/<tid>(/page/<page>)',
   array(

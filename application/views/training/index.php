@@ -23,7 +23,6 @@
                           <div class="item-list">
                               <ul class="pager">
                                   <?php for($i = $start; $i <= $end; $i++): ?>
-
                                       <?php if ($i == $start):?>
                                           <?php if ($start == $current_page):?>
                                               <li class="pager-current first">1</li>

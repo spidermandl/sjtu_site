@@ -21,6 +21,7 @@
                     <img src="../img/8003/1.jpg" style="height:70% !important;width:70% !important;" />
                     <br />
                 <br />
+                    <img src="../img/8003/2.jpg" style="height:70% !important;width:70% !important;" />
                 <br />
                 <h3>
                     招聘职位
