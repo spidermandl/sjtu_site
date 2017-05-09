@@ -63,9 +63,13 @@
                 <br />
                     <img src="../img/8019/5.jpg" style="height:70% !important;width:70% !important;" />
                 <br />
+                <br />
                 <h3>
                     招聘职位
                 </h3>
+                <p>
+                    PHP开发工程师、新媒体编辑、市场策划、自媒体合作、商务渠道
+                </p>
                 <br />
                 
 

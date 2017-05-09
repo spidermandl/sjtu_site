@@ -1,19 +1,17 @@
-报名方式如下：
-
- 1、可直接拨打育知同创咨询电话：010-82583705，届时会有专业的课程顾问老师为您详细解答。
-
- 2、也可登陆育知同创官网页面，点击“在线客服咨询框”，通过在线客服老师报名。
-
- 
-
-提交报名信息 ==》 录入报名信息 ==》 选择班级座位 ==》 支付占座费用 ==》 进入预科班学习 ==》 进行入学考试 ==》 通过测试 ==》 开始正式上课
-
-物理学博士后流动站
-上海交通大学物理学博士后流动站建立于1999年，设于上海交通大学物理与天文学院，拥有光学，凝聚态和理论物理三个博士点。2000年物理学一级学科博士授予权获得批准。
-物理学博士后流动站多年来培养了许多杰出的科技研究人员，在此欢迎更多的海内外已获得博士学位的青年学者来本站进行研究工作。
- 
-联系人：王晓红        电话：021-54743250        邮箱：wangxh@sjtu.edu.cn
- 
-物理学博士后流动站主要专家
- 
-相关事项请访问 上海交通大学博士后流动站
+<div class="pane-content">
+    <div class="views_view view view-node-body-with-title view-id-node_body_with_title view-display-id-panel_pane_1 view-dom-id-1">
+        <div class="view-content">
+            <div class="first last odd">
+                <h2>联系方式</h2>
+                
+                <p>联系人：段指导</p>        
+                <p>移动电话：021-17721122617, 固定电话：021-62932408|021-62932189</p>       
+                <p>邮箱：orientalstu@163.com</p>
+                <p>微信： sjtu_desmond</p>
+                <p>公众号：
+                    <img align="top" src="../img/qrcode_for_gh_8d2180b9c7da_430.jpg" style="height:20% !important;width:20% !important;" />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

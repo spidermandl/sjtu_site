@@ -54,10 +54,14 @@
                     学生入职
                 </h3>
                 <br />
+                    <img src="../img/8005/1.jpg" style="height:70% !important;width:70% !important;" />
+                <br />
                 <h3>
                     招聘职位
                 </h3>
-                <br />
+                <p>
+                    前端开发工程师、PHP开发工程师、Java工程师、iOS开发工程师、产品经理、Android工程师
+                </p>
                 
 
             </div>

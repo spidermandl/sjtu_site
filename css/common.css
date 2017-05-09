@@ -92,7 +92,7 @@ img {
 }
 .header {
   position:relative;
-  background:url(../img/topbg.jpg) right top no-repeat;
+  /*background:url(../img/topbg.jpg) right top no-repeat;*/
 }
 .logo {
   width:360px;
