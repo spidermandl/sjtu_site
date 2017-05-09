@@ -146,9 +146,10 @@
         </div>
         <?php echo($body); ?>
         <div class="footer">
-            <p>© 上海交通大学卓越软件工程 版权所有</p>
+            <p>© 上海交通大学Master Engineer 版权所有</p>
             <p>沪交ICP备05010 地址：法华镇路535号 主楼 邮编：200030</p>
         </div>
+
     </body>
 
 </html>

@@ -14,6 +14,11 @@ class Model_Content extends Model_Base
         'title',
         'create_time',
         'update_time',
+        'flyer',
+        'begin',
+        'duration',
+        'author',
+        'location',
     );
 
     static $primary_key = 'id';
@@ -26,6 +31,11 @@ class Model_Content extends Model_Base
     public $title;
     public $create_time;
     public $update_time;
+    public $flyer;//宣传图片
+    public $begin;//开始时间
+    public $duration;//持续时间
+    public $author;//主讲人
+    public $location;//地点
 
     /**
      * @param string $id
@@ -63,7 +73,12 @@ class Model_Content extends Model_Base
                             self::$table.'.template_id',
                             self::$table.'.link',
                             self::$table.'.create_time',
-                            self::$table.'.update_time')
+                            self::$table.'.update_time',
+                            self::$table.'.flyer',
+                            self::$table.'.begin',
+                            self::$table.'.duration',
+                            self::$table.'.author',
+                            self::$table.'.location')
             ->from(static::$table);//as 语法 array(self::$table.'.id' , 'cid'),array(self::$table.'.title' , 'title')
         
         $query->join(Model_Template::$table,'LEFT')->on(self::$table.'.template_id' , '=' , Model_Template::$table.'.id')
@@ -97,6 +112,7 @@ class Model_Content extends Model_Base
         $this->update_time    = '';
         $this->link = '';
         $this->title = '';
+        $this->flyer = '';
     }
 
     public function validate()

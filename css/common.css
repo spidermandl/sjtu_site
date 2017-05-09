@@ -92,7 +92,7 @@ img {
 }
 .header {
   position:relative;
-  background:url(../img/topbg.jpg) right top no-repeat;
+  /*background:url(../img/topbg.jpg) right top no-repeat;*/
 }
 .logo {
   width:360px;
@@ -854,7 +854,7 @@ ul.primary li.active a .tab,ul.primary li.active a:hover .tab,ul.primary li.acti
   line-height:40px;
 }
 .index-slide img {
-  width:auto;
+  width:604px;
   height:312px;
 }
 .index-slide a.prev {

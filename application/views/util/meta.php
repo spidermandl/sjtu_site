@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link rel="shortcut icon" href="<?php e::url('img/themes/favicon.ico')?>" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php e::url('css/common.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php e::url('css/cck/theme/lightbox.css')?>">
 <!-- <link rel="stylesheet" type="text/css" href="<?php e::url('css/node/node.css')?>">
 <link rel="stylesheet" type="text/css" href="<?php e::url('css/user/user.css')?>">
 <link rel="stylesheet" type="text/css" href="<?php e::url('css/cck/theme/content-module.css')?>">
@@ -16,8 +17,7 @@
 <link rel="stylesheet" type="text/css" href="<?php e::url('css/views/views_slideshow_singleframe/views_slideshow.css')?>">
 <link rel="stylesheet" type="text/css" href="<?php e::url('css/views/views_slideshow_thumbnailhover/views_slideshow.css')?>">
 <link rel="stylesheet" type="text/css" href="<?php e::url('css/cck/fieldgroup/fieldgroup.css')?>">
-<link rel="stylesheet" type="text/css" href="<?php e::url('css/views/views.css')?>">
-<link rel="stylesheet" type="text/css" href="<?php e::url('css/cck/theme/lightbox.css')?>"> -->
+<link rel="stylesheet" type="text/css" href="<?php e::url('css/views/views.css')?>"> -->
 <!--[if IE]>
     <link type="text/css" rel="stylesheet" media="all" href="/sites/www.physics.sjtu.edu.cn/themes/phytheme/css/ie.css?5" />
 <![endif]-->
@@ -29,12 +29,12 @@
 <script type="text/javascript" src="<?php e::url('js/jquery-1.11.0.min.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/slide.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/drupal.js');?>"></script>
+<script type="text/javascript" src="<?php e::url('js/lightbox.min.js');?>"></script> <!--弹出浮框-->
 <!-- <script type="text/javascript" src="<?php e::url('js/no_colons/no_colons.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/panels.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/views_slideshow/jquery.cycle.all.min.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/views_slideshow_singleframe/views_slideshow.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/views_slideshow_thumbnailhover/views_slideshow.js');?>"></script>
-<script type="text/javascript" src="<?php e::url('js/lightbox.min.js');?>"></script>
 <script type="text/javascript" src="<?php e::url('js/floatAd.js');?>"></script> -->
 
 
