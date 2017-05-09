@@ -12,7 +12,7 @@ return array
             'hostname'   => '127.0.0.1',
             'database'   => 'sjtu',
             'username'   => 'root',
-            'password'   => '',
+            'password'   => 'desmond',
             'persistent' => FALSE,
         ),
         'table_prefix' => '',

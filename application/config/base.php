@@ -11,7 +11,7 @@ return array(
     'desc'                => 'DESMOND GEEK组织',
     'keyword'             => 'DESMOND, spidermandl, online judge, offical geek training, program',
     //'domain'              => 'acm.hust.edu.cn',
-    'base_url'            => '/sjtu/',//'/OnlineJudge/', // should ends with /, for example '/oj/'
+    'base_url'            => '/',//'/sjtu/',//'/OnlineJudge/', // should ends with /, for example '/oj/'
     'salt'                => 'sjtu',
     'oi_mode'             => false,
     'submit_time'         => 5, // in second

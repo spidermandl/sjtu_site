@@ -4,7 +4,8 @@ Options +FollowSymlinks
 RewriteEngine On
 
 # Installation directory
-RewriteBase /sjtu/
+RewriteBase  /
+#/sjtu/
 
 # Protect hidden files from being viewed
 <Files .*>
